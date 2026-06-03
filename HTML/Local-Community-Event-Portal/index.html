@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Local Community Event Portal</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+
+        #welcomeBanner {
+            background-color: lightblue;
+            padding: 15px;
+            border-radius: 10px;
+        }
+
+        .highlight {
+            background-color: yellow;
+        }
+
+        nav a {
+            margin-right: 20px;
+            text-decoration: none;
+        }
+
+        table img {
+            width: 180px;
+            height: 120px;
+        }
+
+        .event-img {
+            border: 3px solid black;
+        }
+
+        form {
+            width: 500px;
+            padding: 20px;
+            border: 1px solid gray;
+            border-radius: 10px;
+        }
+
+        input,
+        select,
+        textarea {
+            width: 100%;
+            margin-bottom: 10px;
+            padding: 8px;
+        }
+
+        video {
+            width: 400px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navigation -->
+
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#events">Events</a>
+        <a href="#contact">Contact</a>
+        <a href="help.html" target="_blank">Help</a>
+    </nav>
+
+    <hr>
+
+    <!-- Main -->
+
+    <section id="home">
+
+        <div id="welcomeBanner">
+            <h2>Welcome to Community Event Portal</h2>
+
+            <p class="highlight">
+                Register for exciting community events.
+            </p>
+
+            <span style="color:red;font-weight:bold;">
+                Special Offer: Free Entry for First 50 Registrations!
+            </span>
+
+        </div>
+
+    </section>
+
+    <hr>
+
+    <section id="events">
+
+        <h2>Past Event Gallery</h2>
+
+        <table border="1">
+
+            <tr>
+    <td>
+        <img src="https://picsum.photos/200/120?random=1" alt="Event1" title="Music Event" class="event-img">
+        <p>Music Festival</p>
+    </td>
+
+    <td>
+        <img src="https://picsum.photos/200/120?random=2" alt="Event2" title="Food Event" class="event-img">
+        <p>Food Fair</p>
+    </td>
+
+    <td>
+        <img src="https://picsum.photos/200/120?random=3" alt="Event3" title="Sports Event" class="event-img">
+        <p>Sports Day</p>
+    </td>
+</tr>
+
+<tr>
+    <td>
+        <img src="https://picsum.photos/200/120?random=4" alt="Event4" title="Book Event" class="event-img">
+        <p>Book Exhibition</p>
+    </td>
+
+    <td>
+        <img src="https://picsum.photos/200/120?random=5" alt="Event5" title="Art Event" class="event-img">
+        <p>Art Show</p>
+    </td>
+
+    <td>
+        <img src="https://picsum.photos/200/120?random=6" alt="Event6" title="Dance Event" class="event-img">
+        <p>Dance Competition</p>
+    </td>
+</tr>
+
+        </table>
+
+    </section>
+
+    <hr>
+
+    <h2>Event Registration</h2>
+
+    <form id="eventForm">
+
+        <input type="text"
+            placeholder="Enter Name"
+            required
+            autofocus>
+
+        <input type="email"
+            placeholder="Enter Email"
+            required>
+
+        <input type="date"
+            required>
+
+        <select id="eventType" onchange="showFee()">
+
+            <option value="">Select Event</option>
+            <option value="Music">Music</option>
+            <option value="Sports">Sports</option>
+            <option value="Food">Food</option>
+
+        </select>
+
+        <p id="fee"></p>
+
+        <input type="text"
+            id="phone"
+            placeholder="Phone Number"
+            onblur="validatePhone()">
+
+        <textarea
+            id="feedback"
+            placeholder="Feedback"
+            onkeyup="countChars()"></textarea>
+
+        <p>Characters: <span id="count">0</span></p>
+
+        <button type="button" onclick="submitForm()">
+            Register
+        </button>
+
+        <output id="result"></output>
+
+    </form>
+
+    <hr>
+
+    <h2>Double Click Image</h2>
+
+<img src="https://picsum.photos/200/120?random=1"
+     width="200"
+     ondblclick="enlargeImage(this)">
+
+    <hr>
+
+    <h2>Promo Video</h2>
+
+<video width="400" controls oncanplay="videoReady()">
+    <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
+</video>
+
+<p id="videoStatus"></p>
+
+    <h2>Preferences</h2>
+
+    <button onclick="savePreference()">
+        Save Preference
+    </button>
+
+    <button onclick="clearStorage()">
+        Clear Preferences
+    </button>
+
+    <hr>
+
+    <h2>Nearby Events</h2>
+
+    <button onclick="findLocation()">
+        Find Nearby Events
+    </button>
+
+    <p id="location"></p>
+
+    <section id="contact">
+        <h2>Contact Us</h2>
+        <p>Email: community@gmail.com</p>
+    </section>
+
+    <!-- Footer -->
+
+    <footer>
+        <hr>
+        <p>© 2026 Local Community Event Portal</p>
+    </footer>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
