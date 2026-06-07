@@ -1,0 +1,71 @@
+/* Page Styling */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+}
+
+/* Header */
+header {
+    background-color: navy;
+    color: white;
+    text-align: center;
+    padding: 3vh;
+}
+
+/* Navigation */
+nav {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    background-color: lightgray;
+    padding: 2vh;
+}
+
+nav a {
+    text-decoration: none;
+    color: black;
+}
+
+/* Flexbox Layout */
+.container {
+    display: flex;
+    justify-content: space-around;
+    padding: 2vw;
+}
+
+/* Event Cards */
+.eventCard {
+    width: 40%;
+    border: 2px solid gray;
+    padding: 15px;
+}
+
+.eventCard img {
+    width: 100%;
+}
+
+/* Media Query */
+@media screen and (max-width: 768px) {
+
+    nav {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .container {
+        flex-direction: column;
+    }
+
+    .eventCard {
+        width: 90%;
+        margin: 10px auto;
+    }
+
+    h1 {
+        font-size: 24px;
+    }
+
+    img {
+        width: 100%;
+    }
+}

@@ -1,0 +1,28 @@
+/* Page Styling */
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+}
+
+/* Box Model Example */
+.eventCard {
+    border: 3px solid navy;
+    padding: 20px;
+    margin: 20px;
+    background-color: #f0f8ff;
+}
+
+/* Outline Example */
+input:focus {
+    outline: 3px solid red;
+}
+
+/* Visibility Hidden */
+.hiddenBox {
+    visibility: hidden;
+}
+
+/* Display None */
+.noneBox {
+    display: none;
+}

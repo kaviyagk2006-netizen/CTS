@@ -1,0 +1,55 @@
+/* Body Styling */
+body {
+
+    /* Fallback Color */
+    background-color: #e6f2ff;
+
+    /* Background Image */
+    background-image: url("https://picsum.photos/1200/800");
+
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+
+    font-family: Arial, sans-serif;
+    margin: 20px;
+}
+
+/* Gradient Header */
+header {
+
+    background: linear-gradient(to right,
+            #003366,
+            #3399ff);
+
+    color: white;
+
+    padding: 20px;
+
+    text-align: center;
+
+    border-radius: 10px;
+}
+
+/* Section Styling */
+section {
+
+    background-color: rgba(255, 255, 255, 0.8);
+
+    padding: 20px;
+
+    margin-top: 20px;
+
+    border-radius: 10px;
+}
+
+/* HEX Color */
+h2 {
+    color: #006600;
+}
+
+/* RGBA Color */
+p {
+    color: rgba(0, 0, 0, 0.8);
+    font-size: 18px;
+}
